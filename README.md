@@ -1,11 +1,22 @@
-# Zeytun — Releases
+# Zeytun Releases
 
-Build artifacts and update manifests for the Zeytun desktop app.
+Official builds and auto-update distribution repository for **Zeytun** — a modern, high-performance desktop client for macOS.
 
-The client source is not public. The network core lives at
-https://github.com/zeytun-labs/zeytun-core (GPL-3.0).
+## Downloads
 
-## Contents
+Download the latest release from the [Releases](https://github.com/zeytun-labs/zeytun-release/releases) page:
 
-- `latest.json` — Tauri updater manifest, attached to each release
-- `*.dmg`, `*.app.tar.gz`, `*.sig` — signed macOS builds
+- **macOS (Apple Silicon / arm64):** `zeytun_<version>_aarch64.dmg`
+
+### Installation Note (Gatekeeper)
+
+For ad-hoc unsigned builds on macOS, remove the quarantine attribute if prompted:
+
+```bash
+xattr -dr com.apple.quarantine /Applications/zeytun.app
+```
+
+## Update Channel
+
+- **Desktop Bundles & Updater Artifacts:** Each release contains signed update packages (`.app.tar.gz`, `.sig`) and the update manifest (`latest.json`).
+- **Core Engine:** Built on [zeytun-core](https://github.com/zeytun-labs/zeytun-core) (GPL-3.0).
